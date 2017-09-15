@@ -1,0 +1,28 @@
+{% extends 'fuel_out/main.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+ <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                 <table width = 100%>
+
+                  <tr>
+                    <td width = 10%>Data</td><td width = 10%>Fuel Station id</td><td width = 10%>Fuel Station Name</td>
+                      <td  width = 10%> Fuel Out Quantity </td><td  width = 10%>Fuel In Quantity </td>
+                  </tr>
+                </table>
+                {% for post in posts %}
+                <table width = 100%>
+
+                  <tr>
+                    <td width = 10%>{{post.fuel_data}} </td><td width = 10%>{{post.fuel_number}}</td><td width = 10%>{{post.fuel_trk_name}}</td>
+                      <td  width = 10%>{{post.fuel_summary_out}}</td><td  width = 10%>{{post.fuel_summary_in}}</td>
+                  </tr>
+                </table>
+                {% endfor %}
+            </div>
+        </div>
+ </div>
+{% endblock content %}
