@@ -51,7 +51,7 @@ class FuelReports(models.Model):
     class Meta:
         db_table = 'report_days'
 
-    fuel_data = models.TextField()
+    fuel_data = models.DateTimeField(blank=True, null=True)
     fuel_number = models.IntegerField(default=0)
     fuel_trk_name = models.CharField(max_length=10)
     fuel_summary_out = models.IntegerField(default=0)

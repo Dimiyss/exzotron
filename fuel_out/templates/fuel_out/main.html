@@ -1,10 +1,13 @@
 {% load staticfiles %}
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Exzotron Fuel Manager</title>
+
+    <link rel="stylesheet" href="{% static 'css/fuel_out.css' %}">
 </head>
 <body>
 <div class="page-header">
@@ -16,5 +19,11 @@
 
     {% block content %}
     {% endblock %}
+
+<div class="footer">
+    Exzotron Technology Ukraine
+</div>
+
 </body>
+
 </html>
